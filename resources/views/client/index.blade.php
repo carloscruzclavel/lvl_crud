@@ -1,18 +1,19 @@
 @extends('theme.base')
+@extends('theme.navbar')
 
 @section('content')
-    <div class="container py-5 text-center">
+    <div class="container py-5">
         <h1>Listado de Clientes</h1>
-        <a href="{{ route('client.create') }}" class="btn btn-primary">Crear Cliente</a>
+        <a href="{{ route('client.create') }}" class="btn btn-primary mb-3 float-end">Crear Cliente</a>
 
-        @if (Session::has('mensaje'))
+        @if (Session::has('mensaje'))   
             <div class="alert alert-info my-5">
                 {{Session::get('mensaje') }}
             </div>    
         @endif
         
 
-        <table class="table">
+        <table class="table table-striped table-hover">
             <thead>
                 <th>Nombre</th>
                 <th>Saldo</th>

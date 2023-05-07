@@ -92,4 +92,11 @@ class ClientController extends Controller
 
          return redirect()->route('client.index');
     }
+
+    public function bienvenido(){
+            return view('welcome');
+    }
+
 }
+
+

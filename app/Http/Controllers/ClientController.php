@@ -34,7 +34,7 @@ class ClientController extends Controller
     {
          $request->validate([
             'name' => 'required|max:15',
-            'due' => 'required|gte:50',
+            'due' => 'required|gte:1',
 
          ]);
 
@@ -66,8 +66,8 @@ class ClientController extends Controller
     public function update(Request $request, Client $client)
     {
         $request->validate([
-            'name' => 'required|max:15',
-            'due' => 'required|gte:50',
+            'name' => 'required|max:25',
+            'due' => 'required|gte:1',
 
          ]);
 
